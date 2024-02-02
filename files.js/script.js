@@ -30,12 +30,12 @@ function adivinhaNum() {
     
     let aposta = +prompt("Digite um número de 0 a 100! OBS: apenas números inteiros!")
     aposta = parseInt(aposta)
-    // CASO DE APOSTA INVÁLIDA
+    /// // CASO DE APOSTA INVÁLIDA
     if (aposta > 100 || aposta < 1){
     alert("Insira um número válido!")
     return;
     }
-
+////////////////////////////////////////
 
     if (aposta > numAdivinha) {
         tentativas++;
