@@ -24,29 +24,29 @@ let numAdivinha = 0;
 let tentativas = 0;
 function adivinhaNum() {
     numAdivinha = Math.floor(Math.random() * 100);
-    
+
     while (aposta = numAdivinha) {
 
-    
-    let aposta = +prompt("Digite um número de 0 a 100! OBS: apenas números inteiros!")
-    aposta = parseInt(aposta)
-    /// // CASO DE APOSTA INVÁLIDA
-    if (aposta > 100 || aposta < 1){
-    alert("Insira um número válido!")
-    return;
-    }
-////////////////////////////////////////
 
-    if (aposta > numAdivinha) {
-        tentativas++;
-        alert(`O número secreto é menor que ${aposta}`)
+        let aposta = +prompt("Digite um número de 0 a 100! OBS: apenas números inteiros!")
+        aposta = parseInt(aposta)
+        /// // CASO DE APOSTA INVÁLIDA
+        if (aposta > 100 || aposta < 1) {
+            alert("Insira um número válido!")
+            return;
+        }
+        ////////////////////////////////////////
+
+        if (aposta > numAdivinha) {
+            tentativas++;
+            alert(`O número secreto é menor que ${aposta}`)
+        }
+        else if (aposta < numAdivinha) {
+            tentativas++;
+            alert(`O número secreto é maior que ${aposta}`)
+        }
+        else {
+            alert(`Parabéns você acertou!!! com ${tentativas} tentativas!!!`)
+        }
     }
-    else if (aposta < numAdivinha){
-        tentativas++;
-        alert(`O número secreto é maior que ${aposta}`)
-    }
-    else {
-        alert(`Parabéns você acertou!!! com ${tentativas} tentativas!!!`)
-    }
-}
 }
