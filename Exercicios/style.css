@@ -1,0 +1,7 @@
+body{
+    display: grid;
+    gap: 35px;
+    align-content: center;
+    justify-content: center;
+
+}
