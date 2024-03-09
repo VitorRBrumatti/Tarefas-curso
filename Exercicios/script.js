@@ -37,12 +37,14 @@ function Submit() {
  let comparar = document.querySelector("#compare")
  let comparacao = document.querySelector("#comparacao")   
  function maiorMenor() {
-        let num1 = document.querySelector("#num1").value
-        let num2 = document.querySelector("#num2").value
+        let num1 = parseInt(document.querySelector("#num1").value);
+        let num2 = parseInt(document.querySelector("#num2").value);
         if (num1 > num2) {
             comparacao.innerText = `${num1} é Maior que o ${num2}`
+            console.log("AA");
         } else if (num1 < num2) {
             comparacao.innerText = `${num1} é Menor que o ${num2}`
+            console.log("BB");
         }
         else {
             comparacao.innerText = `${num1} é igual a ${num2}`
