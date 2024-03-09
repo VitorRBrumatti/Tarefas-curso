@@ -49,8 +49,43 @@ function Submit() {
         }
     }
  ///////////////////////////////////////////////////////////////////////////
-function trocaImg() {
-    document.getElementById("image").src = "https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1;"
+ let botaoMostrar = document.querySelector("#mostrarBotao");
+ let botaoEsconder = document.querySelector("#esconderBotao");
+ let img = document.querySelector("#imgOlhar");
+
+function mostraImg() {
+    img.style.display = 'block';
+};
+function escondeImg() {
+    img.style.display = 'none';
 }
 ///////////////////////////////////////////////////////////////////////////
+function calculoIniciado() {
+    let textImc = document.querySelector("#imcResult")
+    let altura = parseFloat(document.querySelector("#altura").value)
+    let peso = parseFloat(document.querySelector("#peso").value)
+    let imc = peso / (altura * altura);
+    
+    if (imc <= 18.5) {
+        textImc.innerText = `Atenção! Você está abaixo do peso seu imc é ${imc}`
+    } 
+    else if (imc >= 18.6 && imc <= 24.9) {
+        textImc.innerText = `Você está com peso normal e seu imc é ${imc}`
+    }
+    else if (imc >= 25 && imc <= 29.9) {
+        textImc.innerText = `Você está com sobrepeso e seu imc é ${imc}`
+    }
+    else if (imc >= 30 && imc <= 34.9) {
+        textImc.innerText = `Você está em Obesidade 1 e seu imc é ${imc}`
+    }
+    else if (imc >= 35 && imc <= 39.9) {
+        textImc.innerText = `Cuidado! Você está em Obesidade 2 e seu imc é ${imc}`
+    }
+    else if (imc >= 40 ) {
+        textImc.innerText = `Atenção! Você está em Obesidade 3!! e seu imc é ${imc}`
+    }
+    else {
+        textImc.innerText = `Insira um valor válido!`
+    }
 
+}
